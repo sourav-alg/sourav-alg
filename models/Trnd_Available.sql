@@ -24,7 +24,7 @@ AvailableCount AS
     GROUP BY Date
 )
 
-SELECT PlansHistory.Date,Plans.ApplicationID,PlansHistory.PlanID,
+SELECT PlansHistory.Date,Plans.ApplicationID,
 CASE WHEN PlansHistory.QuerySuggestions='TRUE' THEN 'Yes' ELSE 'No' END AS QuerySuggestions,
 AvailableCount.QS_Cnt AS QuerySuggestions_Count,
 CASE WHEN PlansHistory.QueryRules='TRUE' THEN 'Yes' ELSE 'No' END AS QueryRules,
